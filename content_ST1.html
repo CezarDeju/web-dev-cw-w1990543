@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contents Page</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333; /* Dark grey background color for the overall background */
+            color: #fff; /* White text color */
+            position: relative; /* Add relative positioning to the body */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 80px 0 20px; /* Adjust top and bottom padding */
+            text-align: center;
+            position: relative; /* Add position relative to header */
+        }
+
+        .logo {
+            position: absolute; /* Position the logo absolutely */
+            top: 20px; /* Adjust top position */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center precisely */
+            width: 200px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        h1 {
+            margin-top: 50px; /* Adjust top margin to create space between logo and title */
+        }
+
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+            display: flex; /* Make nav a flex container */
+            justify-content: center; /* Center items horizontally */
+        }
+
+        nav a, nav button {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #333;
+            border: none;
+            cursor: pointer;
+            font-size: 16px; /* Set font size for all buttons */
+            margin: 0 5px; /* Add margin between buttons */
+        }
+
+        nav a:hover, nav button:hover {
+            text-decoration: underline;
+            background-color: #555;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Contents page specific styles */
+        .contents {
+            background-color: grey; /* Change to lighter grey */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto; /* Center the contents */
+            max-width: 800px; /* Adjusted width for better fit */
+            color: #333; /* Set default text color to black */
+            display: flex; /* Use flexbox for layout */
+            flex-wrap: wrap; /* Allow wrapping of content */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+        }
+
+        .contents h2 {
+            color: #333; /* Change title color to black */
+            text-decoration: underline;
+            font-style: italic; /* Make the text italic */
+            font-size: 30px; /* Set the font size for the section titles */
+            margin-bottom: 40px; /* Increase margin between title and first question */
+            width: 100%; /* Ensure h2 takes full width */
+        }
+
+        .contents ul {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0;
+            width: 100%; /* Ensure ul takes full width */
+        }
+
+        .contents li {
+            margin-bottom: 10px;
+            width: 100%; /* Ensure li takes full width */
+        }
+
+        .contents p {
+            margin-bottom: 20px; /* Adjusted margin */
+            color: #333; /* Set paragraph text color to black */
+            width: calc(100% - 200px); /* Adjusted width for text */
+        }
+
+        .contents p span {
+            color: var(--text-color, #000); /* Set span text color to black or custom color */
+        }
+
+        .contents p span.big-bold {
+            color: var(--question-text-color, black); /* Set color of big bold questions to black or custom color */
+            font-weight: bold; /* Make the text bold */
+            font-size: 24px; /* Adjust font size */
+            font-style: italic; /* Make the text italic */
+            text-decoration: underline var(--question-underline-color, red); /* Underline the text with black or custom color */
+            display: block;
+            margin: 20px auto; /* Add space behind each question title and center it */
+            text-align: center; /* Align the text center */
+        }
+
+        .contents p.answer {
+            text-align: center; /* Align answers to the center */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contents p.answer::before {
+            content: "- "; /* Add "-" before each answer */
+            white-space: nowrap; /* Ensure the "-" stays on the same line */
+        }
+
+        /* Image styles */
+        .answer-image {
+            width: 150px; /* Set the width of the images */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Add border radius */
+            margin-top: 20px; /* Add top margin */
+        }
+
+        .back-to-top {
+    position: fixed;
+    bottom: 20px; /* Position at the bottom */
+    right: 20px; /* Adjust right position */
+    padding: 10px;
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    border: none;
+    border-radius: 50%; /* Make it circular */
+    cursor: pointer;
+    z-index: 999;
+    display: flex; /* Make it flex container */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.back-to-top:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Positioning at the bottom right */
+html, body {
+    height: 100%;
+}
+
+body {
+    position: relative;
+}
+
+.footer {
+    display: none; /* Initially hide the footer */
+    position: fixed; /* Change from absolute to fixed */
+    bottom: 0;
+    width: 100%; /* Make the footer span the entire width */
+    background-color: #333; /* Match background color with the header */
+    color: #fff; /* Text color */
+    padding: 20px; /* Add padding for better appearance */
+}
+
+    </style>
+</head>
+<body>
+<header>
+    <!-- Add the logo here -->
+    <img class="logo" src="https://media.discordapp.net/attachments/1215706197596967063/1223038332691415060/Picture2.png?ex=66186635&amp;is=6605f135&amp;hm=a169515be65a6670f8f31a703853c119310cf27b5d1760525d1d9d194d9306a4&amp;=&amp;format=webp&amp;quality=lossless&amp;width=1910&amp;height=1024"
+         alt="Logo">
+    <h1>Contents Page</h1>
+</header>
+<nav>
+    <button onclick="goToShop()">Shop</button> <!-- Added button to go to the shop -->
+    <button onclick="goToContentsPage()">Contents Page</button> <!-- Changed button text to "Contents Page" -->
+    <button onclick="goToHomePage()">Home Page</button> <!-- Changed button text to "Home Page" -->
+    <a href="https://w1990543.users.ecs.westminster.ac.uk/webDev/EduQt/PageEditor.html">Page Editor</a> <!-- Updated link for Page Editor -->
+</nav>
+<main>
+    <div class="contents">
+        <ul>
+            <!-- Removed the list items with the questions -->
+        </ul>
+        <div id="section1">
+            <p><span class="big-bold">How are school supplies important in helping achieve better education?</span></p>
+            <p class="answer">School supplies play a crucial role in facilitating the learning process by providing students
+                with the necessary tools to engage effectively with educational material. Items such as textbooks, writing
+                implements, and classroom resources empower students to participate actively in lessons, complete
+                assignments, and reinforce learning through independent study. Additionally, access to quality school
+                supplies fosters a conducive learning environment that promotes creativity, critical thinking, and academic
+                achievement.</p>
+            <!-- Added image for the first question -->
+            <img class="answer-image"
+                 src="https://www.povertyactionlab.org/sites/default/files/styles/full_width_medium_cropped/public/images/2022/08/shutterstock_1175241496.jpg?itok=_KJgKtn_"
+                 alt="School Supplies">
+        </div>
+        <div id="section2">
+            <p><span class="big-bold">How are ration packs helpful in achieving higher quality education?</span></p>
+            <p class="answer">Ration packs serve as a vital resource in supporting students' nutritional needs, particularly
+                in contexts where food insecurity may hinder educational attainment. By providing essential sustenance,
+                including balanced meals and snacks, ration packs ensure that students have the energy and focus required
+                to fully engage in learning activities throughout the school day. Moreover, access to nutritious food
+                promotes overall health and well-being, enhancing cognitive function and academic performance, thus
+                contributing to the delivery of higher quality education.</p>
+            <!-- Added image for the second question -->
+            <img class="answer-image"
+                 src="https://images.csmonitor.com/csm/2013/07/0717-India-Schoolchildren-lunch-tragedy.jpg?alias=standard_900x600"
+                 alt="Ration Packs">
+        </div>
+        <div id="section3">
+            <p><span class="big-bold">Where do the Quality Exchange's sales money go?</span></p>
+            <p class="answer"> Fifty percent of the sales revenue is reinvested in brand marketing. Thirty-five percent is
+                distributed among the owners and investors, while the remainder is allocated to supporting other charities
+                with similar missions or funding the construction of schools and factories to produce food and books, which
+                are then distributed worldwide free of charge.</p>
+            <!-- Added image for the third question -->
+            <img class="answer-image"
+                 src="https://themoneycharity.org.uk/media/IMG_1617-700x400.jpg"
+                 alt="Sales Money">
+        </div>
+    </div>
+</main>
+<!-- Footer -->
+<div class="footer">
+    <footer>
+        <center>
+            <p>© 2024 Quality Education, Inc. All Rights Reserved</p>
+        </center>
+    </footer>
+</div>
+
+<!-- "Back to Top" button -->
+<button class="back-to-top" onclick="scrollToTop()">
+    Go to Top <!-- Added text next to the arrow -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16h-2v-8H8l4-4 4 4h-3v8z"/></svg>
+</button>
+
+<!-- JavaScript to handle redirection to the home page -->
+<script>
+    function goToHomePage() {
+        window.location.href = "https://w1979142.users.ecs.westminster.ac.uk/WebDev/EduQt/home.html"; // Redirect to the home page
+    }
+    function goToShop() {
+        window.location.href = "https://w1990543.users.ecs.westminster.ac.uk/EduQt/shop.html"; // Redirect to the shop page
+    }
+    function goToContentsPage() {
+        window.location.href = "https://w1990543.users.ecs.westminster.ac.uk/EduQt/Content_ST1.html"; //Redirect to the contents page
+    }
+    
+    // JavaScript to handle scrolling to the top of the page
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+
+    // JavaScript to show/hide the "Back to Top" button and footer
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        var button = document.querySelector('.back-to-top');
+        var footer = document.querySelector('.footer');
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+        // Check if user has scrolled to the bottom of the page
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            footer.style.display = "block"; // Show the footer
+        } else {
+            footer.style.display = "none"; // Hide the footer
+        }
+    }
+</script>
+</body>
+</html>

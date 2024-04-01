@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333; /* Dark grey background color for the overall background */
+            color: #fff; /* White text color */
+            position: relative; /* Add relative positioning to the body */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 80px 0 20px; /* Adjust top and bottom padding */
+            text-align: center;
+            position: relative; /* Add position relative to header */
+        }
+
+        .logo {
+            position: absolute; /* Position the logo absolutely */
+            top: 20px; /* Adjust top position */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center precisely */
+            width: 200px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        h1 {
+            margin-top: 50px; /* Adjust top margin to create space between logo and title */
+            margin-bottom: 20px; /* Add margin at the bottom of the <h1> element */
+        }
+
+        h3 {
+            margin-top: 20px; /* Add margin at the top of each <h3> element */
+        }
+
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+            display: flex; /* Make nav a flex container */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+        }
+
+        .nav-item {
+            margin-bottom: 20px; /* Add margin between each nav item */
+            background-color: #333; /* Match background color with the header */
+            color: #fff; /* White text color */
+            padding: 20px; /* Add padding */
+            border-radius: 10px; /* Rounded corners */
+            max-width: 800px; /* Adjusted width for better fit */
+        }
+
+        .nav-text {
+            margin-top: 10px; /* Add space between title and text */
+            width: 90%; /* Adjust width */
+            background-color: grey; /* Dark grey background color */
+            color: white; /* White text color */
+            padding: 20px; /* Add padding */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 20px; /* Set font size */
+            line-height: 1.5; /* Set line height */
+        }
+
+        .nav-item a {
+            color: red; /* Change text color to red*/
+            text-decoration: underline black; /* Underline in black */
+            font-size: 25px; /* Set bigger font size for titles */
+            font-style: italic; /* Set font style to italic */
+            background-color: #333; /* grey background color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .nav-item a:hover {
+            background-color: #333; /* grey background color */
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px; /* Position at the bottom */
+            right: 20px; /* Adjust right position */
+            padding: 10px;
+            background-color: #333; /* grey background color */
+            color: white; /* White text color */
+            border: none;
+            border-radius: 50%; /* Make it circular */
+            cursor: pointer;
+            z-index: 999;
+            display: flex; /* Make it flex container */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+
+        .back-to-top:hover {
+            background-color: #333; /* grey background color */
+        }
+
+        /* Positioning at the bottom right */
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        /* Added button style */
+        .shop-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff9600; /* Matching website's button color */
+            color: white; /* White text color */
+            text-decoration: none; /* Remove underline */
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .shop-button:hover {
+            background-color: #e68a00; /* Darker orange on hover */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <!-- Add the logo here -->
+    <img class="logo" src="https://media.discordapp.net/attachments/1215706197596967063/1223038332691415060/Picture2.png?ex=66186635&amp;is=6605f135&amp;hm=a169515be65a6670f8f31a703853c119310cf27b5d1760525d1d9d194d9306a4&amp;=&amp;format=webp&amp;quality=lossless&amp;width=1910&amp;height=1024"
+         alt="Logo">
+    <h1>Page Editor</h1>
+    <!-- Additional Subheadings -->
+    <h3>Name: Cezar Deju</h3>
+    <h3>Role: Student 1</h3>
+    <h3>The pages below were edited by me:</h3>
+</header>
+<nav>
+    <div class="nav-item">
+        <a href="https://w1990543.users.ecs.westminster.ac.uk/EduQt/shop.html" class="shop-button">Shop</a>
+        <div class="nav-text">
+            The Quality Education shop is where I created the online store for users to purchase products that help the Quality Education mission. The store features three different products the user could choose from. They could add or remove as many products as they wanted. And then they could pay for them using a verification process requiring their personal details e.g. billing address and card details that have to be valid.
+        </div>
+    </div>
+    <div class="nav-item">
+        <!-- Updated link for Contents Page -->
+        <a href="https://w1990543.users.ecs.westminster.ac.uk/EduQt/Content_ST1.html" class="shop-button">Contents Page</a>
+        <div class="nav-text">
+            In this page I showed the user a few reasons as to why I created the store.
+        </div>
+    </div>
+    <div class="nav-item">
+        <a href="https://w1979142.users.ecs.westminster.ac.uk/EduQt/home.html">Home Page</a>
+        <div class="nav-text">
+            The home page is where the user is able to see the main page of the website. In order for the home page to be present on every page I chose to add a button called 'Home Page' in every html file except the splash screen, for easy access, which would take the user to the main page of the website.
+        </div>
+    </div>
+    <div class="nav-item">
+        <a href="https://w1990543.users.ecs.westminster.ac.uk/EduQt/shop.html">Page Editor</a>
+        <div class="nav-text">
+            The page editor acts as a map to see all the different webpages I programmed in the Quality Exchange website.
+        </div>
+    </div>
+</nav>
+<main>
+</main>
+<!-- Footer -->
+<div class="footer">
+    <footer>
+        <center>
+            <p>© 2024 Quality Education, Inc. All Rights Reserved</p>
+        </center>
+    </footer>
+</div>
+
+<!-- "Back to Top" button -->
+<button class="back-to-top" onclick="scrollToTop()">
+    Go to Top <!-- Added text next to the arrow -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16h-2v-8H8l4-4 4 4h-3v8z"/></svg>
+</button>
+
+<script>
+    // JavaScript for scrolling to the top when the button is clicked
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality</title>
+    <link rel="stylesheet" href="CSS/styles.css" type="text/css">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=zVRWkEw3wA4fykp1yg-wTCBXq2OpegjoTqShlMhHGrQPfBPh-ZMDTze_5Rr1I56rD9ndH8yD0QtdHcoBJgtoqkNDJcVzNQVAF7MqD8t9oGH7vkZhjq_QzKfOntIJp3wHq0SxbMt26K2C87zl3ZMZuFWMpm6BFlgpGVMOqlatT84hC7UPXLv-22WgkPViioGGuqV7hmF95Dky8xdTf2Mo5liVMo_vl-cxvdj_xHUax0SZyKtsLJa5zw7oJBMnHilnNJ9TxdtwUNPb20RaqjaP9A" charset="UTF-8"></script>
+    <style>
+        /* Your CSS code goes here */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white; /* Change text color to white */
+        }
+
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://media.istockphoto.com/id/1018966316/photo/brazilian-boy-studying-at-home.jpg?s=612x612&w=0&k=20&c=k6ssMKuAqxJ9uK79CskalfhxvE1zWN4fSPqYgxIquvo='); /* Replace 'your-image-url.jpg' with the URL of your image */
+            background-size: cover; /* Adjust background size as needed */
+            filter: grayscale(100%); /* Convert background image to black and white */
+            z-index: -1; /* Place behind other content */
+        }
+
+        .splash-container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch; /* Align items to stretch vertically */
+            height: 100vh;
+        }
+
+        .splash-column {
+            flex: 1; /* Equal width for all columns */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Align items vertically */
+        }
+
+        .splash-content {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* White with opacity */
+            padding: 40px; /* Increased padding */
+            border-radius: 20px; /* Increased border radius */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Increased box shadow for pop effect */
+            border: 2px solid #000; /* Black border */
+            width: 80%; /* Adjust width as needed */
+            max-width: 800px; /* Maximum width */
+            margin: 20px; /* Add margin for spacing */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 1s; /* Smooth transition */
+        }
+
+        .red-text {
+            color: #c00; /* Red color */
+        }
+
+        .black-text {
+            color: black; /* Black color */
+        }
+
+        h1, h2 {
+            color: #c00;
+        }
+
+        button:hover {
+            background-color: #a00;
+        }
+
+        /* Adjustments for logo */
+        .logo-container {
+            position: absolute; /* Position the logo absolutely */
+            top: 50px; /* Adjust as needed */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center precisely */
+            z-index: 1; /* Place in front of background */
+        }
+
+        .logo {
+            width: 300px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Footer style */
+        .footer p {
+            color: white; /* Change text color to white */
+        }
+
+        .footer {
+            background-color: #918d8d;
+            padding: 2px 10px;
+            border-color: black;
+            border-width: 5px;
+            border-style: solid;
+            color: white; /* Change text color to white */
+        }
+
+        /* Remove image loading icon */
+        nav img {
+            display: none;
+        }
+
+        /* Change color of group members' names to black */
+        .members-container p {
+            color: black; /* Change text color to black */
+        }
+
+        /* Underline style */
+        .red-underline {
+            text-decoration: underline; /* Apply underline */
+            text-decoration-color: black; /* Choose the color of the underline */
+        }
+
+        /* Reduce size of loader image */
+        .loader-image-container {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .loader-image {
+            width: 2%; /* Adjust the width to 2% of its original size */
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-container"></div> <!-- Background container -->
+
+    <div class="logo-container">
+        <img class="logo" src="https://media.discordapp.net/attachments/1215706197596967063/1223038332691415060/Picture2.png?ex=66186635&amp;is=6605f135&amp;hm=a169515be65a6670f8f31a703853c119310cf27b5d1760525d1d9d194d9306a4&amp;=&amp;format=webp&amp;quality=lossless&amp;width=1910&amp;height=1024" alt="Logo">
+    </div>
+
+    <div class="splash-container">
+        <div class="splash-column">
+            <div class="splash-content" id="quality-education">
+                <h1><span class="red-text red-underline">Quality Education</span></h1>
+                <p><span class="black-text">Raising the bar for Education</span></p>
+                <p><span class="black-text">Across the World</span></p>
+            </div>
+        </div>
+
+        <div class="splash-column">
+            <!-- Our Mission Box -->
+            <div class="splash-content mission-container">
+                <h2><span class="red-text red-underline">Our Mission</span></h2>
+                <p><span class="black-text">Our goal is to ensure quality education for all.</span></p>
+                <p><span class="black-text">We strive to empower communities globally by bridging educational gaps and increasing the quality of life everywhere</span></p>
+            </div>
+        </div>
+
+        <div class="splash-column">
+            <!-- Group Members Box -->
+            <div class="splash-content members-container">
+                <h2><span class="red-text red-underline">The Group Members behind Quality Education</span></h2>
+                <p>Kooroosh G.S. - w1972353</p>
+                <p>Michaell S. - w1885886</p>
+                <p>Cezar D. - w1990543</p>
+                <p>Jannath V. - w1979142</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <footer>
+            <center><p>© 2024 Quality Education, Inc. All Rights Reserved</p></center>
+        </footer>
+    </div>
+
+    <!-- Loader image -->
+    <div class="loader-image-container">
+        <img class="loader-image" src="https://i.gifer.com/ZZ5H.gif" alt="Loader">
+        <p>Next page is loading...</p>
+    </div>
+
+    <script>
+        // Your JavaScript code goes here
+        setTimeout(function() {
+            document.getElementById('quality-education').style.opacity = '1';
+        }, 0);
+
+        setTimeout(function() {
+            document.querySelector('.mission-container').style.opacity = '1';
+        }, 2000); // Show after 2 seconds
+
+        setTimeout(function() {
+            document.querySelector('.members-container').style.opacity = '1';
+        }, 4000); // Show after 4 seconds
+
+        setTimeout(function() {
+            window.location.href = 'https://w1979142.users.ecs.westminster.ac.uk/WebDev/EduQt/home.html';
+        }, 8000); // Open link after 8 seconds
+    </script>
+</body>
+</html>
+
